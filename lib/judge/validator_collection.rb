@@ -19,7 +19,7 @@ module Judge
     end
 
     def to_json
-      validators.map { |v| v.to_hash }.to_json
+      validators.map { |v| v.to_mash }.to_json
     end
 
     protected

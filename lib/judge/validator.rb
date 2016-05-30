@@ -14,7 +14,9 @@ module Judge
       @original_value    = object.send(method)
     end
 
-    def to_hash
+    # HACKHACKHACK/drs: We can't overload `to_hash` for some reason, so let's
+    # do the next best thing.
+    def to_mash
       params = {
         :kind => kind,
         :options => options,
